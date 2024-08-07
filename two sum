@@ -1,0 +1,26 @@
+QUESTION-->Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+SOLUTION-->
+#include<stdio.h>
+int main(){
+    int target;
+    int i,j,k;
+    int arr[100];
+    int size;
+    printf("enter the size of the array:\n");
+    scanf("%d",&size);
+    printf("enter the value of the target:\n");
+    scanf("%d",&target);
+    printf("enter the values in the matrix:\n");
+    for(k=0;k<size;k++){
+        scanf("%d",&arr[k]);
+    }
+    for(i=0;i<size-1;i++){
+        for(j=i+1;j<(size);j++){
+            if(arr[i]+arr[j]==target){
+                printf("%d %d",i,j);
+            }
+        }
+    }
+}
